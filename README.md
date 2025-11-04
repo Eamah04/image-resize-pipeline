@@ -14,8 +14,8 @@ The resized image is then stored in a separate S3 bucket.
 3. **Step Functions** – Orchestrates the workflow.
 4. **Lambda Function** – Resizes the image using Pillow (Python).
 5. **S3 (Resized Bucket)** – Stores the resized output image.
-
-   [Client/Postman] → [API Gateway] → [Step Functions] → [Lambda] → [S3 Resized Bucket] ↑ └── [S3 Original Bucket]
+'''text
+[Client/Postman] → [API Gateway] → [Step Functions] → [Lambda] → [S3 Resized Bucket] ↑ └── [S3 Original Bucket]
 ---
 
 ## How It Works
@@ -55,4 +55,4 @@ Step Functions definition: stepfunctions/state_machine.json
 
 ## Author
 Emmanuel Amah
-Registered Nurse | Business Information Systems Student | Aspiring Cloud & Systems Develope
+Registered Nurse | Business Information Systems Student | Aspiring Cloud & Systems Developer
