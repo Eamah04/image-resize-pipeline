@@ -29,6 +29,7 @@ with JSON body:
   "key": "Lexus350.jpg"
 }
 
+----
 3. API Gateway starts the Step Functions state machine.
 
 4. Step Functions invokes the Lambda function.
