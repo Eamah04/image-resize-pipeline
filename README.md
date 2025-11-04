@@ -14,8 +14,7 @@ The resized image is then stored in a separate S3 bucket.
 3. **Step Functions** – Orchestrates the workflow.
 4. **Lambda Function** – Resizes the image using Pillow (Python).
 5. **S3 (Resized Bucket)** – Stores the resized output image.
-'''text
-[Client/Postman] → [API Gateway] → [Step Functions] → [Lambda] → [S3 Resized Bucket] ↑ └── [S3 Original Bucket]
+
 ---
 
 ## How It Works
@@ -28,7 +27,7 @@ with JSON body:
   "bucket": "amahoriginalimagebucket",
   "key": "Lexus350.jpg"
 }
-
+```
 ----
 3. API Gateway starts the Step Functions state machine.
 
@@ -41,10 +40,12 @@ with JSON body:
 ## Testing the Pipeline
 Step 1: Upload an image to the original S3 bucket.
 Step 2: Use Postman to send a POST request with Content-Type: application/json. Example body:
+```json
 {
   "bucket": "amahoriginalimagebucket",
   "key": "Lexus350.jpg"
 }
+```
 Step 3: Verify execution in the Step Functions console.
 
 Step 4: Check the resized S3 bucket for the output image.
